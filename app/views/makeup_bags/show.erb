@@ -1,0 +1,10 @@
+<%= @bag.name %>
+<%= @bag.capacity %>
+
+<h3>Lipsticks</h3>
+<ul>
+  <% @bag.lipsticks.each do |lipstick| %>
+  <li><a href="/lipsticks/<%= lipstick.id%>"><%= lipstick.name %></a></li>
+  <% end %>
+</ul>
+<a href="/bags/<%=@bag.id%>/edit">Edit Bag</a>
