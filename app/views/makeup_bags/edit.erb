@@ -1,7 +1,11 @@
-<h1>Edit <%= @bag.name %></h1>
-<form action="/bags/<%= @bag.id %>" method="POST">
-  <label>Bag Name </label>
-  <input type="text" name="name" value="<%=@bag.name%>">
+<div class="container">
+  <h3 class="thin">Edit <%= @bag.name %> Makeup Bag</h3>
+    <form action="/bags/<%= @bag.id %>" method="POST">
+      <label>New Makeup Bag Name </label>
+      <input type="text" name="name" value="<%=@bag.name%>">
 
-  <input type="submit" value="Update">
-</form>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Update
+      <i class="material-icons right">mode_edit</i>
+    </button>
+    </form>
+  </div>
