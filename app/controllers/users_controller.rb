@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
   get '/signup' do
     if !session[:user_id]
-      erb :'users/new'
+      erb :'users/create_user'
     else
       redirect to '/lipsticks'
     end

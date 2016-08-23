@@ -17,6 +17,7 @@ class LipsticksController < ApplicationController
     @error_message = params[:error]
     @lipstick = Lipstick.find_by_id(params[:id])
     erb :'lipsticks/edit'
+
   end
 
   post '/lipsticks/:id' do
@@ -35,6 +36,7 @@ class LipsticksController < ApplicationController
     erb :'lipsticks/show'
   end
 
+
   post '/lipsticks' do
     redirect_if_not_logged_in
     unless Lipstick.valid_params?(params)
@@ -43,4 +45,5 @@ class LipsticksController < ApplicationController
     Lipstick.create(:shade => params["shade"], :brand => params["brand"])
     redirect "/lipsticks"
   end
+
 end

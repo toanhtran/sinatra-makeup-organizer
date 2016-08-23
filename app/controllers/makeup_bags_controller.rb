@@ -4,6 +4,7 @@ class MakeupBagsController < ApplicationController
     redirect_if_not_logged_in
     @bags = MakeupBag.all
     @lipsticks = Lipstick.all
+    @user = current_user
     erb :'makeup_bags/index'
   end
 

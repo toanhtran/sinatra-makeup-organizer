@@ -2,6 +2,7 @@
   <h4 class="thin">Edit <%= @lipstick.shade %></h4>
 
   <form action="/lipsticks/<%= @lipstick.id %>" method="POST">
+
     <label>Lipstick Shade</label>
     <input type="text" name="shade" value="<%= @lipstick.shade %>">
 
@@ -10,12 +11,8 @@
 
     <button class="btn waves-effect waves-light black" type="submit" name="action">Update
     <i class="material-icons right">mode_edit</i>
-  </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-  <button class="btn waves-effect waves-light black" type="submit" name="action">Delete
-  <i class="material-icons right">delete</i>
-</button>
-
+  </button>
+  
   </form>
 
 </div>

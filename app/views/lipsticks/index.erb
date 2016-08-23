@@ -1,11 +1,13 @@
 <div class="container">
+  <h3 class="thin">Lipsticks</h3>
 
   <% @lipsticks.each do |lipstick| %>
-    <%= lipstick.shade %> <br>
-    <%= lipstick.brand %>
+    <%= lipstick.id%>. Shade: <%= lipstick.shade %>,&nbsp; Brand: <%= lipstick.brand %>
     <a href="/lipsticks/<%= lipstick.id %>/edit">Edit</a>
     <br>
     <br>
   <% end %>
+
+  <h5><a href="/bags">See All Makeup Bags</a></h5>
 
 </div>

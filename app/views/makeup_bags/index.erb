@@ -1,5 +1,5 @@
 <div class="container">
-  <h3 class="thin">Welcome</h3>
+  <h3 class="thin">Welcome <%= @user.username %></h3>
   <h4 class="thin">Here are your Makeup Bags</h4>
 <% @bags.each do |bag| %>
   <ul>
@@ -8,5 +8,8 @@
   </ul>
 
 <% end %>
+
+<br><br>
+<h4><a href="/logout">Log Out</a></h4>
 
 </div>
