@@ -23,10 +23,10 @@ class LipsticksController < ApplicationController
     redirect_if_not_logged_in
     @lipstick = Lipstick.find_by_id(params[:id])
     unless Lipstick.valid_params?(params)
-      redirect '/lipsticks/#{@lipstick.id}/edit?error=invalid lipstick'
+      redirect "/lipsticks/#{@lipstick.id}/edit?error=invaild lipstick"
     end
-    @lipstick.update(params.select{|key| k=="shade" || key=="brand" || key=="makeupbag_id"})
-    redirect '/lipsticks/#{@lipstick.id}'
+    @lipstick.update(params.select{|key| key=="shade" || key=="brand" || key=="makeupbag_id"})
+    redirect "/lipsticks/#{@lipstick.id}"
   end
 
   get '/lipsticks/:id' do
@@ -38,9 +38,9 @@ class LipsticksController < ApplicationController
   post '/lipsticks' do
     redirect_if_not_logged_in
     unless Lipstick.valid_params?(params)
-      redirect '/lipsticks/new?error=invalid lipstick'
+      redirect "/lipsticks/new?error=invalid lipstick"
     end
     Lipstick.create(:shade => params["shade"], :brand => params["brand"])
-    redirect '/lipsticks'
+    redirect "/lipsticks"
   end
 end

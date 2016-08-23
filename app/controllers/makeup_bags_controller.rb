@@ -3,6 +3,7 @@ class MakeupBagsController < ApplicationController
   get '/bags' do
     redirect_if_not_logged_in
     @bags = MakeupBag.all
+    @lipsticks = Lipstick.all
     erb :'makeup_bags/index'
   end
 
