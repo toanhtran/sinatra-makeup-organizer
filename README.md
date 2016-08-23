@@ -3,6 +3,10 @@
 ## Installation
 To use this app, just clone, run
 ```sh
+ $ bundle install
+ ```
+
+```sh
  $ rake db:migrate
  ```
  and then run
