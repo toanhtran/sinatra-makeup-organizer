@@ -1,22 +1,27 @@
 class MakeupBagsController < ApplicationController
 
+  get '/bags' do
+    redirect_if_not_logged_in
+    @bags = MakeupBag.all
+    erb :'makeup_bags/index'
+  end
 
-  get "/bags/new" do
+  get '/bags/new' do
     redirect_if_not_logged_in
     @error_message = params[:error]
     erb :'makeup_bags/new'
   end
 
-  get "/bags/:id/edit" do
+  get '/bags/:id/edit' do
     redirect_if_not_logged_in
     @error_message = params[:error]
     @bag = MakeupBag.find_by_id(params[:id])
     erb :'makeup_bags/edit'
   end
 
-  post "/bags/:id" do
+  post '/bags/:id' do
     redirect_if_not_logged_in
-    @bag = MakeupBag.find(params[:id])
+    @bag = MakeupBag.find_by_id(params[:id])
     unless MakeupBag.valid_params?(params)
       redirect "/bags/#{@bag.id}/edit?error=invalid bag"
     end
@@ -24,13 +29,13 @@ class MakeupBagsController < ApplicationController
     redirect "/bags/#{@bag.id}"
   end
 
-  get "/bags/:id" do
+  get '/bags/:id' do
     redirect_if_not_logged_in
     @bag = MakeupBag.find_by_id(params[:id])
     erb :'makeup_bags/show'
   end
 
-  post "/bags" do
+  post '/bags' do
     redirect_if_not_logged_in
     unless MakeupBag.valid_params?(params)
       redirect "/bags/new?error=invalid bag"
