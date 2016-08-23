@@ -1,9 +1,11 @@
 <div class="container">
+  <h3 class="thin">All Makeup Bags</h3>
 <% @bags.each do |bag| %>
-<%= bag.name %> <br>
+  <ul>
+    <%= bag.name %> <br>
+    <a href="/bags/<%= bag.id %>/edit">Edit Bag</a>
+  </ul>
 
-<a href="/bags/<%= bag.id %>/edit">Edit Makeup Bag</a>
-<br><br>
 <% end %>
 
 </div>

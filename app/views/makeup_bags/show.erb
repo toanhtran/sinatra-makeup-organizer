@@ -1,9 +1,10 @@
-<%= @bag.id %>
+<div class="container">
+  <% @bag.id %>
+  <h2 class="thin">Makeup Bag Name: <br />
+     <%= @bag.name %></h2>
 
-<h3>Lipsticks</h3>
-<ul>
-  <% @bag.lipsticks.each do |lipstick| %>
-  <li><a href="/lipsticks/<%= lipstick.id%>"><%= lipstick.name %></a></li>
-  <% end %>
-</ul>
-<a href="/bags/<%=@bag.id%>/edit">Edit Bag</a>
+  <h4 class="thin">Itemized List of Lipsticks:</h4>
+
+
+  <a href="/bags/<%=@bag.id%>/edit">Edit Bag</a>
+</div>

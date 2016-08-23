@@ -1,7 +1,11 @@
-<% @lipsticks.each do |lipsticks| %>
-  <%= lipstick.shade %> <br>
-  <%= lipstick.brand %>
-  <a href="/lipsticks/<%= lipstick.id %>/edit">Edit</a>
-  <br>
-  <br>
-<% end %>
+<div class="container">
+
+  <% @lipsticks.each do |lipstick| %>
+    <%= lipstick.shade %> <br>
+    <%= lipstick.brand %>
+    <a href="/lipsticks/<%= lipstick.id %>/edit">Edit</a>
+    <br>
+    <br>
+  <% end %>
+
+</div>

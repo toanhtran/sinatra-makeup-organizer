@@ -1,0 +1,10 @@
+<div class="container">
+
+  <%= @lipstick.shade %> <%= @lipstick.brand %>
+
+  Bag: <a href="/bags/<%@lipstick.makeupbag_id%>"><%= @lipstick.makeupbag_id.name%></a>
+  <a href="/lipsticks/<%= @lipstick.id%>/edit">Edit</a>
+
+
+
+</div>
