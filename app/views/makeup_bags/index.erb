@@ -1,5 +1,6 @@
 <div class="container">
-  <h3 class="thin">All Makeup Bags</h3>
+  <h3>Welcome <%= @user.username %></h3>
+  <h4 class="thin">Here are your Makeup Bags</h4>
 <% @bags.each do |bag| %>
   <ul>
     <%= bag.name %> <br>

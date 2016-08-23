@@ -40,7 +40,7 @@ class MakeupBagsController < ApplicationController
     unless MakeupBag.valid_params?(params)
       redirect "/bags/new?error=invalid bag"
     end
-    MakeupBag.create(params)
+    MakeupBag.create(:name => params[:name])
     redirect "/bags"
   end
 end
