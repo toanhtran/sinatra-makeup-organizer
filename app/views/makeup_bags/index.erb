@@ -1,6 +1,9 @@
+<div class="container">
 <% @bags.each do |bag| %>
 <%= bag.name %> <br>
 
 <a href="/bags/<%= bag.id %>/edit">Edit Makeup Bag</a>
 <br><br>
 <% end %>
+
+</div>

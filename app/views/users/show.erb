@@ -1,5 +1,5 @@
 <h2>Here are your Makeup Bags, <%= @user.username %></h2>
-<% @use.makeup_bags.each do |bag| %>
+<% @user.makeup_bags.each do |bag| %>
 <ul>
   <li><a href="/bags/<%=bag.id%>"><%=bag.name%></a></li>
 </ul>
