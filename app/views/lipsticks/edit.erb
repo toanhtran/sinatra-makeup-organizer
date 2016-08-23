@@ -1,0 +1,23 @@
+<div class="container">
+  <h4 class="thin">Edit <%= @lipstick.shade %></h4>
+
+  <form action="/lipsticks/<%=@lipstick.id %>" method="POST">
+    <label>Lipstick Shade</label>
+    <input type="text" name="shade" value="<%= @lipstick.shade %>">
+
+    <label>Lipstick Brand</label>
+    <input type="text" name="brand" value="<%= @lipstick.brand %>">
+
+    <label>Which Makeup Bag does this belong in? </label>
+    <select name="makeupbag_id" value="makeupbag_id">
+      <% current_user.makeup_bags.each do |bag| %>
+      <option value=<%=bag.id%> <%= "selected" if bag.id ==@lipstick.makeupbag_id%><%= bag.name%>></option>
+      <% end %>
+    </select>
+
+    <input type="submit" value="Update">
+
+
+  </form>
+
+</div>
