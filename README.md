@@ -1,5 +1,8 @@
 # Makeup Organizer
 
+The Makeup organizer is a Sinatra app to organize your makeup.
+Never had to worry about losing your makeup. Organize and itemize all your makeup and category into different looks and makeup bags. 
+
 ## Installation
 To use this app, just clone, run
 ```sh
@@ -14,7 +17,9 @@ To use this app, just clone, run
  $ shotgun
  ```
 
-The Makeup organizer is a Sinatra app to organize your makeup.
+
+
+
 
 ## Contributors guide
 Thank you for wanted to contribute to The Makeup Organizer.
