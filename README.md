@@ -16,6 +16,9 @@ To use this app, just clone, run
  ```sh
  $ shotgun
  ```
+ 
+ To view app http://127.0.0.1:9393/
+ 
 <img width="764" alt="make-org-home" src="https://user-images.githubusercontent.com/10580157/29853845-108efa30-8cf7-11e7-9ccf-4aea4982310b.png">
 
 <img width="775" alt="login" src="https://user-images.githubusercontent.com/10580157/29853850-1675acfa-8cf7-11e7-9ea6-53f99f594950.png">
